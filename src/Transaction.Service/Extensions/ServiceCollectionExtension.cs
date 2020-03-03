@@ -24,7 +24,7 @@ namespace Transaction.Service.Extensions
             //services.AddAutoMapper(x => x.AddProfile(new MappingProfile()));
 
             // Connection String
-            services.AddDbContext<TransactionContext>(options => options.UseSqlServer(configuration.GetConnectionString("SqlServerConnection")));
+            services.AddDbContext<TransactionDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("SqlServerConnection")));
 
             return services;
         }
