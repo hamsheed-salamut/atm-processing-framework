@@ -40,7 +40,7 @@ namespace Transaction.Core.Validations
             if (accountSummary == null)
             {
                 throw new InvalidAccountNumberException(accountNumber);
-            }
+            }//
 
             await Task.CompletedTask;
         }
