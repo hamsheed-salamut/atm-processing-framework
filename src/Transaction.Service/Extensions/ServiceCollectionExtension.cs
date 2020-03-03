@@ -11,7 +11,7 @@ namespace Transaction.Service.Extensions
 {
     public static class ServiceCollectionExtension
     {
-        public static IServiceCollection AddTransactionFramework(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddTransactionFramework(this IServiceCollection services, Microsoft.Extensions.Configuration.IConfiguration configuration)
         {
             // Service
             //services.AddScoped<ITransactionService, TransactionService>();
