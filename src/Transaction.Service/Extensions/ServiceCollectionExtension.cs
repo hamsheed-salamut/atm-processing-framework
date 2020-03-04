@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Transaction.Infrastructure.Context;
+using Transaction.Infrastructure.Persistence;
 
 namespace Transaction.Service.Extensions
 {

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Transaction.Infrastructure.Context
+namespace Transaction.Infrastructure.Persistence
 {
     public class TransactionDbContext : DbContext
     {
