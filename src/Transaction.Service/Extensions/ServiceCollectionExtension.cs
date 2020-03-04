@@ -5,7 +5,10 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Transaction.Core.Interfaces;
 using Transaction.Infrastructure.Persistence;
+using Transaction.Infrastructure.Repositories;
+using Transaction.Service.Services;
 
 namespace Transaction.Service.Extensions
 {
@@ -14,11 +17,11 @@ namespace Transaction.Service.Extensions
         public static IServiceCollection AddTransactionFramework(this IServiceCollection services, Microsoft.Extensions.Configuration.IConfiguration configuration)
         {
             // Service
-            //services.AddScoped<ITransactionService, TransactionService>();
+            services.AddScoped<ITransactionService, TransactionService>();
 
             // Repository
-            //services.AddScoped<IAccountSummaryRepository, AccountSummaryRepository>();
-            //services.AddScoped<IAccountTransactionRepository, AccountTransactionRepository>();
+            services.AddScoped<IAccountSummaryRepository, AccountSummaryRepository>();
+            services.AddScoped<IAccountTransactionRepository, AccountTransactionRepository>();
 
             // Mappers
             //services.AddAutoMapper(x => x.AddProfile(new MappingProfile()));

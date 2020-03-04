@@ -10,7 +10,7 @@ namespace Transaction.Core.Validations
 {
     public static class TransactionValidation
     {
-        public static async Task Validate(AccountTransaction accountTransaction, AccountSummary accountSummary)
+        public static async Task Validate(this AccountTransaction accountTransaction, AccountSummary accountSummary)
         {
             var amount = accountTransaction.Amount;
 
@@ -35,7 +35,7 @@ namespace Transaction.Core.Validations
             await Task.CompletedTask;
         }
 
-        public static async Task Validate(AccountSummary accountSummary, int accountNumber)
+        public static async Task Validate(this AccountSummary accountSummary, int accountNumber)
         {
             if (accountSummary == null)
             {
