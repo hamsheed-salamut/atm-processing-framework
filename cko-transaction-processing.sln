@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transaction.Core", "src\Tra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{DAB37C35-693E-4FD4-8976-B49416E61925}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateway.Api", "src\Gateway.Api\Gateway.Api.csproj", "{47BD8E5F-57FD-41F7-BA71-344CF7F3A73A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateway.WebApi", "src\Gateway.Api\Gateway.WebApi.csproj", "{47BD8E5F-57FD-41F7-BA71-344CF7F3A73A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{C6DB519C-775C-444E-90AB-EF3B7F6BB62F}"
 EndProject
