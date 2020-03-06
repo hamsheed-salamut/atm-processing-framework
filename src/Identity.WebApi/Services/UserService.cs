@@ -10,20 +10,17 @@ namespace Identity.WebApi.Services
     {
         bool Authenticate(string username, string password);
     }
-
-    public class UserService : IUserService
+    public class UserService: IUserService
     {
         private List<User> _users = new List<User>
         {
-            new User { AccountNumber = 3628101, Currency = "EUR", FullName = "Hamsheed Salamut", Username = "hsalamut", Password = "hamsheed@gmail.com" }
+            new User { AccountNumber = 316247, Currency = "MU", FullName = "Hamsheed", Username = "hamsheed", Password = "hamsheed123"}
         };
 
         public bool Authenticate(string username, string password)
         {
             var user = _users.SingleOrDefault(x => x.Username == username && x.Password == password);
 
-            if (user != null)
-                return true;
             return true;
         }
     }
