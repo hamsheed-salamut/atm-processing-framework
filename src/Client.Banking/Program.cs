@@ -9,7 +9,7 @@ namespace Client.Banking
 {
     class Program
     {
-        static readonly string baseUrl = "http://localhost:44397";
+        static readonly string baseUrl = "https://localhost:44397";
         static HttpClient client = new HttpClient();
 
         static async Task<SecurityToken> Authenticate(Login login)

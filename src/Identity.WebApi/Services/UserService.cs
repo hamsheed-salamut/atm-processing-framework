@@ -20,7 +20,7 @@ namespace Identity.WebApi.Services
     {
         private List<User> _users = new List<User>
         {
-            new User { AccountNumber = 316247, Currency = "MU", FullName = "Hamsheed", Username = "hamsheed", Password = "hamsheed123"}
+            new User { AccountNumber = 3628101, Currency = "MU", FullName = "Hamsheed", Username = "hamsheed", Password = "hamsheed123"}
         };
 
         private readonly AppSettings _appSettings;

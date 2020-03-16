@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Transaction.Core.Domain;
@@ -28,6 +29,7 @@ namespace Transaction.WebApi.Controllers
             _mapper = mapper;
         }
 
+        [AllowAnonymous]
         [HttpGet("balance")]
         public async Task<IActionResult> Balance()
         {
@@ -36,7 +38,7 @@ namespace Transaction.WebApi.Controllers
             return Ok(_mapper.Map<TransactionResultModel>(transactionResult));
         }
 
-        [HttpPost]
+        [HttpPost("deposit")]
         public async Task<IActionResult> Deposit([FromBody] TransactionModel accountTransactionModel)
         {
             var accountTransaction = _mapper.Map<AccountTransaction>(accountTransactionModel);
