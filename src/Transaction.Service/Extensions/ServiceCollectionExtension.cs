@@ -1,4 +1,4 @@
-﻿using AutoMapper.Configuration;
+﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,13 +8,14 @@ using System.Text;
 using Transaction.Core.Interfaces;
 using Transaction.Infrastructure.Persistence;
 using Transaction.Infrastructure.Repositories;
+using Transaction.Service.Mappers;
 using Transaction.Service.Services;
 
 namespace Transaction.Service.Extensions
 {
     public static class ServiceCollectionExtension
     {
-        public static IServiceCollection AddTransactionFramework(this IServiceCollection services, Microsoft.Extensions.Configuration.IConfiguration configuration)
+        public static IServiceCollection AddTransactionFramework(this IServiceCollection services, IConfiguration configuration)
         {
             // Service
             services.AddScoped<ITransactionService, TransactionService>();
@@ -24,7 +25,7 @@ namespace Transaction.Service.Extensions
             services.AddScoped<IAccountTransactionRepository, AccountTransactionRepository>();
 
             // Mappers
-            //services.AddAutoMapper(x => x.AddProfile(new MappingProfile()));
+            services.AddAutoMapper(x => x.AddProfile(new MappingProfile()));
 
             // Connection String
             services.AddDbContext<TransactionDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("SqlServerConnection")));
