@@ -8,10 +8,11 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Transaction.Service\Transaction.Service.csproj" />
+    <ProjectReference Include="..\Transaction.Service\Transaction.Service.csproj" />
   </ItemGroup>
 
 </Project>
