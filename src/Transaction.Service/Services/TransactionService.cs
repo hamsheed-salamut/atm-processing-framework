@@ -63,7 +63,7 @@ namespace Transaction.Service.Services
 
         public async Task<TransactionResult> Withdraw(AccountTransaction accountTransaction)
         {
-            _logger.LogInformation(LoggingEvents.Withdrawal, " account trnasaction:{0}", JsonConvert.SerializeObject(accountTransaction));
+            _logger.LogInformation(LoggingEvents.Withdrawal, " account transaction:{0}", JsonConvert.SerializeObject(accountTransaction));
 
             Guard.ArgumentNotNull(nameof(accountTransaction), accountTransaction);
 
