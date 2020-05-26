@@ -1,4 +1,9 @@
-## Microserve Application
+# ATM - Microservice Application
+
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
+> ##Note:
+> Project still under development
 
 ## Introduction
 This is a .Net Core sample application and an example of how to build and implement a microservices based back-end system for a simple automated banking feature like Balance, Deposit, Withdraw in ASP.NET Core Web API with C#.Net, Entity Framework and SQL Server. 
